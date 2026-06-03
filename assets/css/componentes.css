@@ -1,0 +1,72 @@
+.cabecalho {
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    user-select: none;
+    z-index: 1;
+}
+
+.cabecalho__layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-inline: 3.125rem;
+}
+
+.cabecalho__layout > img {
+    width: 216px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.cabecalho__layout > ul {padding: 0;}
+
+.cabecalho__navegacao {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.cabecalho__navegacao li {
+    list-style: none;
+    font-weight: 500;
+}
+.cabecalho__navegacao li a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.75rem 0.9rem;
+    position: relative;
+    z-index: 0;
+    transition: color 0.5s ease-in;
+}
+
+.cabecalho__navegacao li a::before {
+    content: "";
+    background-image: var(--fundo-gradiente);
+    box-shadow: var(--iluminacao);
+    border-radius: 16px;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.65s ease-in-out;
+}
+
+.cabecalho__navegacao li a.selecionado,
+.cabecalho__navegacao li a:hover,
+.cabecalho__navegacao li a:focus-visible {
+    color: var(--tipografia-cor-secundaria);
+}
+
+.cabecalho__navegacao li a.selecionado::before,
+.cabecalho__navegacao li a:hover::before,
+.cabecalho__navegacao li a:focus-visible::before {
+    transform: scale(1);
+    opacity: 1;
+}

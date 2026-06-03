@@ -1,0 +1,15 @@
+@import url(componentes.css);
+@import url(variaveis.css);
+
+*, *::before, *::after {box-sizing: border-box;}
+
+html {font-size: var(--tipografia-medida);}
+
+body {
+    background-color: var(--fundo);
+    font-family: var(--tipografia);
+    color: var(--tipografia-cor-primaria);
+    margin: 0;
+}
+
+main, section, footer {display: none;}
