@@ -12,4 +12,46 @@ body {
     margin: 0;
 }
 
-main, section, footer {display: none;}
+section, footer {display: none;}
+
+#cta {
+    background-image: linear-gradient(to bottom, 
+            #FFFFFF 0%,
+            #FCEFFF 50%,
+            #F4CCFF 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: var(--sombriamento);
+    position: relative;
+    z-index: 0;
+    height: 700px;
+}
+
+.cta__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10rem;
+}
+
+.cta__inform {
+    padding-block-start: 2rem;
+    max-width: 750px;
+    
+}
+
+.cta__inform > h1 {
+    color: var(--tipografia-cor-terciaria);
+    font-size: 3.1875rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cta__inform > p {
+    max-width: calc(100% - 25%);
+    line-height: var(--tipografia-altura);
+    font-weight: 500;
+}
+
+.cta__container > img {align-self: flex-end;}
