@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FCEFFF;
+    color: #333333;
+}
+
+.cabecalho {
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.cabecalho__layout {
+    max-width: 1440px; 
+    margin: 0 auto;
+    padding: 24px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho__navegacao {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.cabecalho__navegacao a {
+    text-decoration: none;
+    color: #8431FF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#cta {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-image: url('pexels-seyfidurmaz-5311543.png');
+    background-size: center;
+    background-position: center;
+    /* transform: matrix(-1, 0, 0, 1, 0, 0);  */
+}
+
+#qs {
+    max-width: 1440px;
+    margin: 80px auto;
+    padding: 0 160px;
+    display: flex;
+    gap: 80px;
+}
+
+#cpta {
+    background: none;
+    padding: 64px 0;
+}
+
+.cpta_card {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 45px;
+    width: 28rem;
+    height: none;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.100) 0px 5px 6px;
+    border-radius: 20px; */
+
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: left;
+    width: 380px;
+}
+
+.rodape {
+    background-blend-mode: var(#E76DFF, #8A04FF80);
+    /* background: #6E0D7B; */
+    color: #FFFFFF;
+    padding: 64px 160px 40px 160px;
+}
+
+.rodape__navegacao {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid #FCEFFF;
+    padding-bottom: 48px;
+}
+
+.rodape__contato {
+    max-width: 1440px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape__midias {
+    display: flex;
+    gap: 16px;
+}
+
+/* <!-- #FCEFFF
+#8431FF
+#E76DFF
+#8A04FF80
+#DC2FFB
+#6E0D7B --> */
