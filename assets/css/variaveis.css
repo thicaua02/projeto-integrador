@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --tipografia: "Open Sans", Helvetica;
+    --tipografia-altura: 1.75;
+    --tipografia-cor-primaria: #000;
+    --tipografia-cor-secundaria: #FFF;
+    --tipografia-cor-terciaria: #DD00FF;
+    --tipografia-medida: 16px;
+
+    --fundo: #FBEBFF;
+    --fundo-elemento: #FFF;
+    --fundo-gradiente: linear-gradient(to right bottom, #E76DFF 20%, #812DFF 100%);
+    --iluminacao: -25px -25px 50px -25px rgba(0, 238, 255, 0.4) inset;
+    --sombriamento-secundario:
+        rgba(50, 50, 93, 0.3) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.35) 0px 8px 16px -8px;
+    --sombriamento-primario: rgba(0, 0, 0, 0.4) 0 25px 20px -20px;
+}
