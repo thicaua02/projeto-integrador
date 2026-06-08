@@ -11,6 +11,9 @@
     --fundo: #FBEBFF;
     --fundo-elemento: #FFF;
     --fundo-gradiente: linear-gradient(to right bottom, #E76DFF 20%, #812DFF 100%);
-    --iluminacao: -25px -25px 50px -25px rgba(0, 238, 255, 0.25) inset;
-    --sombriamento: 0 25px 20px -20px rgba(0, 0, 0, 0.25);
+    --iluminacao: -25px -25px 50px -25px rgba(0, 238, 255, 0.4) inset;
+    --sombriamento-secundario:
+        rgba(50, 50, 93, 0.3) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.35) 0px 8px 16px -8px;
+    --sombriamento-primario: rgba(0, 0, 0, 0.4) 0 25px 20px -20px;
 }
