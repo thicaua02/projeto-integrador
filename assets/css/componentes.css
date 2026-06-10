@@ -102,6 +102,65 @@
 
 .cabecalho__botao::after {bottom: 40%;}
 
+.botao, .botao--modificado {
+    background-image: var(--fundo-gradiente);
+    box-shadow: var(--iluminacao), var(--sombriamento-secundario);
+    color: var(--tipografia-cor-secundaria);
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 1.25vw, 1rem);
+    transition: transform 0.25s linear;
+}
+
+.botao:hover {transform: scale(1.05);}
+
+.botao--modificado {
+    background-image: none;
+    background-color: var(--fundo-elemento);
+    color: #C900FF;
+    box-shadow: var(--sombriamento-secundario);
+    animation: pulsacao 2s infinite;
+}
+
+.rodape {
+    background-image: var(--fundo-gradiente);
+    min-height: 300px;
+    padding: 2rem;
+}
+
+.rodape > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16rem;    
+}
+
+.rodape ul {
+    margin: 0;
+    padding: 0;
+}
+
+.rodape ul li {list-style: none;}
+
+.rodape h2 {
+    color: var(--tipografia-cor-secundaria);
+    margin-block-end: 1rem;
+}
+
+.rodape a {
+    text-decoration-line: none;
+    color: var(--tipografia-cor-secundaria);
+    line-height: 2;
+}
+
+.rodape a:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
 @media (max-width: 1000px) {
     .cabecalho__layout > img {
         width: 197px;
@@ -144,30 +203,9 @@
     .cabecalho__navegacao.ativado {display: flex;}
 
     .cabecalho__botao {display: block;}
-}
 
-.botao, .botao--modificado {
-    background-image: var(--fundo-gradiente);
-    box-shadow: var(--iluminacao), var(--sombriamento-secundario);
-    color: var(--tipografia-cor-secundaria);
-    padding: 1rem 1.25rem;
-    border-radius: 16px;
-    display: inline-block;
-    text-decoration: none;
-    font-size: clamp(0.7rem, 1.25vw, 1rem);
-    transition: transform 0.25s linear;
-}
-
-.botao:hover {transform: scale(1.05);}
-
-.botao--modificado {
-    background-image: none;
-    background-color: var(--fundo-elemento);
-    color: #C900FF;
-    box-shadow: var(--sombriamento-secundario);
-    animation: pulsacao 2s infinite;
-}
-
-.rodape {
-    background-image: var(--fundo-gradiente);
+    .botao, .botao--modificado {
+        font-size: 0.6rem;
+        padding: 0.75rem;
+    }
 }
