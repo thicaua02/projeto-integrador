@@ -167,3 +167,7 @@
     box-shadow: var(--sombriamento-secundario);
     animation: pulsacao 2s infinite;
 }
+
+.rodape {
+    background-image: var(--fundo-gradiente);
+}

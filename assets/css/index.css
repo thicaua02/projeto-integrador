@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-h1, h2, h3 {margin: 0;}
+h1, h2, h3, h4 {margin: 0;}
 
 h2 {
     color: var(--tipografia-cor-terciaria);
@@ -25,8 +25,6 @@ p {
     line-height: var(--tipografia-altura);
     margin-block: 2rem;
 }
-
-footer {display: none;}
 
 article {margin-block-end: 15rem;}
 
@@ -45,7 +43,8 @@ article {margin-block-end: 15rem;}
 
 .cta__container, 
 .cpta__container, 
-.cfma__container, 
+.cfma__container,
+.depoimentos__container,
 #qs {
     max-width: calc(100% - 8rem);
     margin-inline: auto;
@@ -136,7 +135,7 @@ article {margin-block-end: 15rem;}
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    min-height: 600px;
+    min-height: 580px;
 }
 
 .cpta__container > section {
@@ -210,3 +209,48 @@ article {margin-block-end: 15rem;}
 }
 
 .cfma__container > section {max-width: 580px;}
+
+#depoimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.depoimentos__container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.depoimentos__container > section {
+    background-color: var(--fundo-elemento);
+    box-shadow: var(--sombriamento-primario);
+    flex-basis: 325px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 1.5rem 1.25rem;
+}
+
+.depoimentos__container p {margin-block: 1.25rem;}
+
+.depoimentos__container h3 {font-size: 25px;}
+
+.depoimentos__perfil {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 25px;
+}
+
+.depoimentos__perfil > div {
+    background-color: #E2E2E2;
+    border-radius: 64px;
+    width: 25px;
+    height: inherit;
+}
+
+.depoimentos__perfil > h4 {font-weight: 400;}
