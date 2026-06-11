@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 80px;
     padding-inline: clamp(2.25rem, 4.25vw, 3.125rem);
 }
 
@@ -102,7 +102,7 @@
 
 .cabecalho__botao::after {bottom: 40%;}
 
-.botao, .botao--modificado {
+.botao, .botao--modificado, .botao--mobile {
     background-image: var(--fundo-gradiente);
     box-shadow: var(--iluminacao), var(--sombriamento-secundario);
     color: var(--tipografia-cor-secundaria);
@@ -114,7 +114,8 @@
     transition: transform 0.25s linear;
 }
 
-.botao:hover {transform: scale(1.05);}
+.botao:hover,
+.botao:focus {transform: scale(1.05);}
 
 .botao--modificado {
     background-image: none;
@@ -123,6 +124,16 @@
     box-shadow: var(--sombriamento-secundario);
     animation: pulsacao 2s infinite;
 }
+
+.botao--mobile {
+    display: none;
+    align-self: stretch;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.botao--mobile:hover,
+.botao--mobile:focus {transform: scale(1.05);}
 
 .rodape {
     background-image: var(--fundo-gradiente);
@@ -171,7 +182,7 @@
 }
 
 @media (max-width: 700px) {
-    .cabecalho__layout {padding-inline: 1.25rem;}
+    .cabecalho__layout {padding-inline: 1rem;}
 
     .cabecalho__layout > img {
         width: 150px;
@@ -207,5 +218,8 @@
     .botao, .botao--modificado {
         font-size: 0.6rem;
         padding: 0.75rem;
+        box-shadow: none;
     }
+
+    .botao {box-shadow: var(--iluminacao)}
 }
