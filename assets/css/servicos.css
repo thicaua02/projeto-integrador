@@ -3,26 +3,31 @@
 @import url(componentes.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 *,
 *::after,
 *::before {
     margin: 0;
-    padding: none;
+    padding: 0; 
+    box-sizing: border-box;
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 body {
     background-color: #FCEFFF;
-    font-family: var(--tipografia);
+    font-family: var(--tipografia, 'Roboto', sans-serif); 
+    overflow-x: hidden; /* Evita rolagem horizontal acidental */
 }
-
 
 h1,
 h2,
 h3 {
     color: #DD00FF;
-
-
 }
 
 h2 {
@@ -30,179 +35,166 @@ h2 {
     text-align: center;
 }
 
+
+.cabecalho__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.cabecalho__navegacao {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.cabecalho__navegacao a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
 main {
     font-family: 'Roboto', sans-serif;
-
-    h1 {
-        font-size: 2.5rem;
-        margin-block-end: 3rem;
-
-    }
-
-    .principal {
-
-        margin-inline: auto;
-        max-width: 2200px;
-        align-items: center;
-        display: flex;
-        height: 650px;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-inline-start: 2rem;
-
-        position: relative;
-        box-shadow: rgba(0, 0, 0, 0.100) 0px 12px 6px;
-        border-radius: 0px;
-        overflow: hidden;
-
-        .esquerdo {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
-            filter: blur(50px)
-        }
-
-
-        .direito {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            filter: blur(50px)
-        }
-
-        .imgprincipal {
-            align-self: flex-end;
-
-
-        }
-    }
-
-
-
-
-
-
-    .inform {
-        max-width: 800px;
-
-        text-align: center;
-        gap: 4rem;
-        flex-direction: column;
-
-        p {
-            text-align: center;
-            font-size: 1.25rem;
-
-
-        }
-
-    }
-
 }
 
-.terapia {
+main h1 {
+    font-size: 2.5rem;
+    margin-block-end: 2rem;
+}
 
-    margin-top: 8rem;
+
+.principal {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    min-height: 600px; 
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.100) 0px 12px 6px;
+    border-radius: 0px;
+    overflow: hidden;
+    flex-wrap: wrap; 
+}
+
+.principal .esquerdo,
+.principal .direito {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.principal .esquerdo { left: 0; }
+.principal .direito { right: 0; }
+
+.principal .inform {
+    flex: 1 1 400px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.principal .inform p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.principal .imgprincipal {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Terapia Online */
+.terapia {
+    margin-top: 6rem;
     text-align: center;
     font-size: 1.25rem;
-    margin-left: 2rem;
-
-    .largura {
-        line-height: 2rem;
-        width: 75rem;
-        
-        margin: 0 auto;
-       
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 90px;
-    }
-
-
+    padding: 0 2rem;
 }
 
+.terapia p {
+    max-width: 800px; 
+    margin-inline: auto;
+    line-height: 1.6;
+}
 
+.terapia h2 {
+    margin-bottom: 2rem;
+}
 
 
 .cards {
     display: flex;
-    margin-top: 10rem;
-    max-width: 1000px;
-    margin-inline: auto;
-
-
-
-
     flex-direction: column;
+    margin-top: 6rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 0 2rem;
+}
 
+.cards h2 {
+    margin-bottom: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 2rem;
-    gap: 45px;
-    width: 28rem;
-    height: 14rem;
-    padding: 1rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    width: 100%; 
+    max-width: 22rem; 
+    min-height: 14rem; 
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.100) 0px 5px 6px;
     border-radius: 20px;
-
-    p {
-        width: 25rem;
-        font-family: 'Roboto';
-        font-size: 1.1rem;
-        font-weight: 400;
-        margin-top: 50px;
-    }
-
-    h3 {
-        font-family: 'Open Sans';
-
-        margin-block: -50px;
-
-
-    }
-
-
-
-
-
+    gap: 1.5rem;
 }
 
-.container {
-    display: flex;
-
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-
-
+.card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
 }
 
+.card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%; /* Removida a largura fixa de 25rem que quebrava o card */
+    line-height: 1.5;
+}
+
+/* Banner */
 .banner {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 80%;
-    background-image: url(../imgs/fundo.jpg);
-    height: 600px;
+    background-position: center;
+    background-image: url(../imgs/imgServicosFundo.jpg);
+    min-height: 500px; /* Flexibilidade de altura */
     position: relative;
     margin-block-start: 7rem;
     z-index: 0;
-
-    .atencao {
-        color: #ffffff;
-        text-align: center;
-        align-items: end;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .banner::before {
@@ -214,82 +206,127 @@ main {
     backdrop-filter: blur(5px);
 }
 
-
 .interno {
-    height: 100%;
     text-align: center;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
     position: relative;
     z-index: 2;
     color: white;
-    line-height: 3rem;
-
-    h2 {
-        color: white;
-        margin-block-end: 55px;
-    }
-
-    p {
-        margin-inline: auto;
-        max-width: 800px;
-    }
-
-
-
-    a {
-        text-decoration: none;
-        color: white;
-        background-color: #8a04ff9f;
-        padding: 1rem;
-        line-height: 15rem;
-        border-radius: 3rem;
-    }
-
-
-
-
+    width: 100%;
+    max-width: 800px;
 }
 
+.interno h2 {
+    color: white;
+    margin-block-end: 2rem;
+}
 
+.interno p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
 
+.interno a {
+    text-decoration: none;
+    color: white;
+    background-color: #8a04ff9f;
+    padding: 1rem 2rem; /* Substituído o line-height de 15rem por padding */
+    border-radius: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.interno a:hover {
+    background-color: #DD00FF;
+}
+
+/* --- RODAPÉ --- */
 .rodape {
-
-    padding: 1rem;
+    padding: 3rem 2rem;
     display: flex;
-    margin-inline: auto;
-    max-width: 1900px;
-    max-height: 300px;
+    flex-wrap: wrap; /* Permite que as colunas desçam em telas menores */
+    justify-content: space-around;
+    gap: 3rem;
     background-image: linear-gradient(to right, #E76DFF, #812DFF);
-
 }
 
 .rodape ul {
-
     display: flex;
-    position: relative;
-    gap: 1rem;
-
-    margin-inline: auto;
     flex-direction: column;
-
-    align-items: start;
-
-
-    h2 {
-        color: white;
-        font-size:2rem; 
-    }
-
-    a {
-        color: white;
-        font-size: 1rem;
-        text-decoration: none;
-    }
-
+    gap: 1rem;
     list-style-type: none;
+}
 
+.rodape h2 {
+    color: white;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.rodape a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.rodape a:hover {
+    opacity: 0.8;
+}
+
+/* ========================================= */
+/* MEDIA QUERIES (RESPONSIVIDADE PARA MOBILE) */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* Navegação vira uma coluna centralizada */
+    .cabecalho__layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .cabecalho__navegacao {
+        justify-content: center;
+    }
+
+    /* O banner principal empilha a imagem e o texto */
+    .principal {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+    .principal .inform {
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .terapia p {
+        max-width: 100%;
+    }
+
+    /* Reduz espaços gerais */
+    .terapia, .cards, .banner {
+        margin-top: 4rem;
+    }
+
+    /* Rodapé empilha em uma única coluna */
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape ul {
+        align-items: center;
+    }
+
+    .rodape h2 {
+        text-align: center;
+    }
 }
